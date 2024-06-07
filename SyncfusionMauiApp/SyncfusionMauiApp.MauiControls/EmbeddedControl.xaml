@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+             xmlns:local="clr-namespace:SyncfusionMauiApp.MauiControls"
+             x:Class="SyncfusionMauiApp.MauiControls.EmbeddedControl"
+             HorizontalOptions="Fill"
+             VerticalOptions="Fill">
+
+  <charts:SfCartesianChart>
+    <charts:SfCartesianChart.BindingContext>
+      <local:ChartDataViewModel />
+    </charts:SfCartesianChart.BindingContext>
+
+    <charts:SfCartesianChart.XAxes>
+      <charts:CategoryAxis />
+    </charts:SfCartesianChart.XAxes>
+
+    <charts:SfCartesianChart.YAxes>
+      <charts:NumericalAxis />
+    </charts:SfCartesianChart.YAxes>
+
+    <charts:ColumnSeries ItemsSource="{Binding ColumnData}"
+                         XBindingPath="Name"
+                         YBindingPath="Value"/>
+  </charts:SfCartesianChart>
+</ContentView>

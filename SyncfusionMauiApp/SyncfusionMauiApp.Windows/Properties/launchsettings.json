@@ -1,0 +1,10 @@
+{
+	"profiles": {
+		"SyncfusionMauiApp.Windows (Unpackaged)": {
+			"commandName": "Project"
+		},
+		"SyncfusionMauiApp.Windows (Package)": {
+			"commandName": "MsixPackage"
+		}
+	}
+}
